@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Política de Cookies</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -17,24 +21,39 @@
     }
 
     .cookie-box {
+      width: 90%;
+      max-width: 400px;
+      background-color: #f9f9f9;
       text-align: center;
       padding: 20px;
       border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .cookie-box h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .cookie-box p {
+      font-size: 1em;
+      margin-bottom: 20px;
     }
 
     .cookie-buttons {
-      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .cookie-buttons a {
       text-decoration: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 4px;
-      font-size: 16px;
-      display: inline-block;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
     .accept {
@@ -42,9 +61,28 @@
       color: white;
     }
 
+    .accept:hover {
+      background-color: #45a049;
+    }
+
     .reject {
       background-color: #f44336;
       color: white;
+    }
+
+    .reject:hover {
+      background-color: #d7372c;
+    }
+
+    @media (min-width: 480px) {
+      .cookie-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .cookie-buttons a {
+        width: 45%;
+      }
     }
   </style>
 </head>
